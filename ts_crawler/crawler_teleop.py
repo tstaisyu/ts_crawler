@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-## object_detection_cugo & tele_operation!　##
+## object_detection & tele_operation　##
 
 import rospy
 import time
@@ -36,7 +36,7 @@ BTN_A = 0x0002
 AXS_MAX = 1.0
 AXS_OFF = 0.0
 
-class CugoController():
+class TSCrawlerController():
     def __init__(self):
         self.message = "stop"
         self.btn = 0
@@ -162,9 +162,9 @@ class CugoController():
 
 def main():
     # start node
-    rospy.init_node("cugo_teleop", anonymous=True)
+    rospy.init_node("TSCrawler_teleop", anonymous=True)
         
-    instance = CugoController()
+    instance = TScrawlerController()
  
     # ratesleep
     rate = rospy.Rate(40)
